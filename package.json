@@ -1,0 +1,22 @@
+{
+  "name": "@example/starter",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "astro": "^1.0.0-beta.14",
+    "autoprefixer": "^10.4.4",
+    "postcss": "^8.4.12",
+    "postcss-jit-props": "^1.0.6",
+    "sass": "^1.50.0"
+  },
+  "dependencies": {
+    "astro-icon": "^0.7.1",
+    "astro-imagetools": "^0.5.3"
+  }
+}
