@@ -70,6 +70,9 @@ const htmlContent = `<div class="container">
   .popup summary::marker {
     content: none;
   }
+  .popup summary::-webkit-details-marker {
+    display: none;
+  }
 
   .popup summary svg {
     inline-size: 1.25em;
@@ -82,6 +85,7 @@ const htmlContent = `<div class="container">
 
   .popup[open] summary {
     background: var(--blue-900);
+    box-shadow: inset 0 -1px 1px #fff3, inset 0px 1px 1px 1px #0000007d;
   }
 
   .popup summary + div {
@@ -95,6 +99,7 @@ const htmlContent = `<div class="container">
     filter: drop-shadow(0 1px .25px #fff3) drop-shadow(2px 4px 12px rgba(0,0,0,0.2666666667)) drop-shadow(0 1px 2px rgba(0,0,0,0.0666666667));
   }
 
+
   .popup pre {
     margin-block: 0;
     -ms-overflow-style: none;
@@ -107,7 +112,7 @@ const htmlContent = `<div class="container">
   border-bottom: var(--h) solid #0000;
   background-origin: border-box;
   background-color: var(--blue-700);
-  --m: conic-gradient(from -45deg at var(--p) 100%,#0000,#000 1deg 90deg,#0000 91deg) 0 100%/100% calc(100% - var(--r)) no-repeat, conic-gradient(at calc(var(--r)/2) calc(var(--r)/2),#000 270deg,#0000 0) 0 0/calc(100% - var(--r)/2) calc(100% - var(--r)/2) padding-box, radial-gradient(50% 50%,#000 98%,#0000) 0 0/var(--r) var(--r) space padding-box;
+  --m: #{conic-gradient(from -45deg at var(--p) 100%,#0000,#000 1deg 90deg,#0000 91deg) 0 100%/100% calc(100% - var(--r)) no-repeat, conic-gradient(at calc(var(--r)/2) calc(var(--r)/2),#000 270deg,#0000 0) 0 0/calc(100% - var(--r)/2) calc(100% - var(--r)/2) padding-box, radial-gradient(50% 50%,#000 98%,#0000) 0 0/var(--r) var(--r) space padding-box};
   -webkit-mask: var(--m);
   mask: var(--m);
   inline-size: max-content;

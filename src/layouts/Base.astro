@@ -26,13 +26,13 @@ const {title} = Astro.props;
 
     <Footer />
 
-    <script is:inline src="/script/bliss.js"></script>
-    <script is:inline src="/script/prism.js"></script>
-    <script is:inline src="/script/prism-live.js"></script>
-    <script is:inline src="/script/prism-live-markup.js"></script>
-    <script is:inline src="/script/prism-live-css.js"></script>
-    <script is:inline src="/script/prism-linenumbers.js"></script>
-    <script is:inline type="module" src="/script/custom.js"></script>
+    <script is:inline src="/script/bliss.js" fetchpriority="low"></script>
+    <script is:inline src="/script/prism.js" fetchpriority="low"></script>
+    <script is:inline src="/script/prism-live.js" fetchpriority="low"></script>
+    <script is:inline src="/script/prism-live-markup.js" fetchpriority="low"></script>
+    <script is:inline src="/script/prism-live-css.js" fetchpriority="low"></script>
+    <script is:inline src="/script/prism-linenumbers.js" fetchpriority="low"></script>
+    <script is:inline type="module" src="/script/custom.js" fetchpriority="low"></script>
 </body>
 </html>
 

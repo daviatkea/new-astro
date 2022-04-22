@@ -38,7 +38,7 @@ const { customClass, help, Content } = data
                       <source src={data.frontmatter.targetSrc.path} type="video/mp4" />
                   </video>
               ) : (
-                  <img loading={num===1 ? "eager" : "lazy"} src={data.frontmatter.targetSrc.path} alt="" width={data.frontmatter.targetSrc.width} height={data.frontmatter.targetSrc.height}>
+                  <img loading={num===1 ? "eager" : "lazy"} fetchpriority={num===1 ? "high" : "low"} src={data.frontmatter.targetSrc.path} alt="" width={data.frontmatter.targetSrc.width} height={data.frontmatter.targetSrc.height}>
               )
             }
         </article>

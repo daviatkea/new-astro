@@ -1,14 +1,14 @@
 {
-  function observeHeader() {
-    const el = document.querySelector(".main-header");
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([e]) => e.target.classList.toggle("is-pinned", e.intersectionRatio < 1),
-      { threshold: 1 }
-    );
-    observer.observe(el);
-  }
-  observeHeader();
+  // function observeHeader() {
+  //   const el = document.querySelector(".main-header");
+  //   if (!el) return;
+  //   const observer = new IntersectionObserver(
+  //     ([e]) => e.target.classList.toggle("is-pinned", e.intersectionRatio < 1),
+  //     { threshold: 1 }
+  //   );
+  //   observer.observe(el);
+  // }
+  // observeHeader();
 
   const copyMe = document.querySelectorAll("h2 a[href]");
 

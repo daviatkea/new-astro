@@ -164,6 +164,7 @@ html {
   scroll-padding-block-start: var(--space-7);
   touch-action: pan-y;
   scroll-behavior: smooth;
+  overscroll-behavior: contain;
 }
 
 body {
@@ -249,6 +250,10 @@ main {
     );
   gap: var(--space-9) 0;
   /* counter-reset: task; */
+  // background: var(--blue-900);
+  // padding-block-start: var(--space-9);
+  // clip-path: polygon(0 var(--space-6), 100% 0, 100% 100%, 0 100%);
+  // margin-block-start: calc(-1 * var(--space-6));
 }
 
 section {

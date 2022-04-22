@@ -164,6 +164,7 @@ pre[class*="language-"] {
 pre[class*="language-"].line-numbers {
   position: relative;
   padding-left: 3.8em;
+  padding-left: clamp(3.56rem, calc(3.36rem + 1.02vw), 4.13rem);
   counter-reset: linenumber;
 }
 
@@ -179,6 +180,7 @@ pre[class*="language-"].line-numbers > code {
   top: -0.225em;
   font-size: 100%;
   left: -3.8em;
+  left: calc(-1 * clamp(3.56rem, calc(3.36rem + 1.02vw), 4.13rem));
   width: 3em; /* works for line-numbers below 1000 lines */
   letter-spacing: -1px;
   // border-right: 1px solid #999;
