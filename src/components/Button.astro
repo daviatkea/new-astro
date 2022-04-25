@@ -16,16 +16,17 @@ const { icon } = Astro.props;
 
 <style lang="scss">
     [astro-icon] {
-        color: var(--btn-icon, currentColor);
+        color: var(--btn-icon, var(--ui-secondary));
     }
     button.plus {
-        --btn-icon: var(--ui-accent);
-        --btn-theme: var(--ui-accent);
+        // --btn-icon: var(--ui-accent);
+        // --btn-icon: var(--ui-secondary);
+        // --btn-theme: var(--ui-accent);
     }
     button.minus {
-        --btn-icon: hsl(324 66% 37%);
-        --btn-theme: hsl(324 66% 37%);
-        --btn-bg: hsl(324 60% 85%);
-        --btn-active: hsl(324 60% 80%);
+        // --btn-icon: hsl(324 66% 37%);
+        // --btn-theme: hsl(324 66% 37%);
+        // --btn-bg: hsl(324 60% 85%);
+        // --btn-active: hsl(324 60% 80%);
     }
 </style>

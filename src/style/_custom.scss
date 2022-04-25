@@ -772,14 +772,16 @@ button {
   border-radius: var(--bdrs-round);
   border: 0;
   // background: hsl(324deg 50% 80%);
-  background: var(--btn-bg, hsl(264 50% 88%));
-  color: #2a2139;
+  // background: var(--btn-bg, hsl(264 50% 88%));
+  background: var(--blue-900, hsl(264 50% 88%));
+  // color: #2a2139;
+  color: #fff;
   font-weight: 600;
   font-size: 0.95rem;
   padding: var(--space-1) var(--space-3);
   cursor: pointer;
-  box-shadow: var(--btn-theme, var(--ui-accent)) var(--fake, 0) var(--fake, 0)
-    var(--fake, 0) var(--btn-stroke, 1px) inset;
+  // box-shadow: var(--btn-theme, var(--ui-accent)) var(--fake, 0) var(--fake, 0)
+  //   var(--fake, 0) var(--btn-stroke, 1px) inset;
   transition: 0.2s box-shadow;
   will-change: box-shadow;
 }
@@ -795,7 +797,8 @@ button.reset:focus-visible::before {
 button:active {
   // box-shadow: inset 0 0 0 2px #5000ca;
   --btn-stroke: 2px;
-  background: var(--btn-active, hsl(264 50% 80%));
+  // background: var(--btn-active, hsl(264 50% 80%));
+  background: var(--blue-700);
 }
 
 button[disabled] {
