@@ -9,7 +9,7 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^1.0.0-beta.18",
+    "astro": "^1.0.0-beta.19",
     "autoprefixer": "^10.4.4",
     "postcss": "^8.4.12",
     "postcss-jit-props": "^1.0.6",

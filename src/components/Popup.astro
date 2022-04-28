@@ -6,6 +6,10 @@ const boxCount = boxes.map((_,index)=>(`<div class="box box-${index+1}">box-${in
 const htmlContent = `<div class="container">
   ${boxCount}
 </div>`
+const htmlContentAlt = `<div class="container">
+  <div class="box box-1">box-1</div>
+  ...
+</div>`
 ---
 
 <details class="popup">
@@ -18,7 +22,7 @@ const htmlContent = `<div class="container">
     </summary>
     <div>
         <!-- <Prism lang="html" code={htmlContent} />   -->
-<textarea class="prism-live language-html">{htmlContent}</textarea>
+<textarea class="prism-live language-html">{boxes.length > 1 ? htmlContent : htmlContentAlt}</textarea>
     </div>
 </details>
 
@@ -110,7 +114,7 @@ const htmlContent = `<div class="container">
   border-bottom: var(--h) solid #0000;
   background-origin: border-box;
   background-color: var(--blue-700);
-  --m: #{conic-gradient(from -45deg at var(--p) 100%,#0000,#000 1deg 90deg,#0000 91deg) 0 100%/100% calc(100% - var(--r)) no-repeat, conic-gradient(at calc(var(--r)/2) calc(var(--r)/2),#000 270deg,#0000 0) 0 0/calc(100% - var(--r)/2) calc(100% - var(--r)/2) padding-box, radial-gradient(50% 50%,#000 98%,#0000) 0 0/var(--r) var(--r) space padding-box};
+  --m: conic-gradient(from -45deg at var(--p) 100%,#0000,#000 1deg 90deg,#0000 91deg) 0 100%/100% calc(100% - var(--r)) no-repeat, conic-gradient(at calc(var(--r)/2) calc(var(--r)/2),#000 270deg,#0000 0) 0 0 / calc(100% - var(--r)/2) calc(100% - var(--r)/2) padding-box, radial-gradient(50% 50%,#000 98%,#0000) 0 0 / var(--r) var(--r) space padding-box;
   -webkit-mask: var(--m);
   mask: var(--m);
   inline-size: max-content;
