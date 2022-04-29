@@ -7,7 +7,7 @@ const boxes = [...Array(data.frontmatter.boxes)]
 const { customClass, help, Content } = data
 ---
 
-<section data-extra={data.frontmatter.isExtra && "true"} data-exercise-key={data.frontmatter.id} class={customClass ?? null}>
+<section data-extra={data.frontmatter.isExtra && "true"} data-exercise-key={data.frontmatter.id} class={data.frontmatter.customClass ?? ""}>
         <h2 class="small-label" id={`exercise-${num}`}><a href={`#exercise-${num}`}>Øvelse {num} af {all}</a></h2>
 
         {data.frontmatter.isExtra && (
