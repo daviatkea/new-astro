@@ -22,7 +22,7 @@ const htmlContentAlt = `<div class="container">
     </summary>
     <div>
         <!-- <Prism lang="html" code={htmlContent} />   -->
-<textarea class="prism-live language-html">{boxes.length > 1 ? htmlContent : htmlContentAlt}</textarea>
+<textarea aria-label="HTML code" class="prism-live language-html">{boxes.length > 1 ? htmlContent : htmlContentAlt}</textarea>
     </div>
 </details>
 
@@ -123,7 +123,8 @@ const htmlContentAlt = `<div class="container">
 @media (max-width: 920px){
   .popup summary + div {
     left: auto;
-    right: calc(-1 * var(--space-5));
+    // right: calc(-1 * var(--space-5));
+    right: -2rem;
   }
   .popup pre {
     --p: 88%;

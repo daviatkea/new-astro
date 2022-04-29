@@ -38,7 +38,31 @@
   //   });
   // });
 
+  const options = {
+    threshold: [0.1, 0.5, 0.9],
+    // rootMargin: "-250px 0px -250px 0px",
+    rootMargin: `${-window.innerHeight / 3}px 0px ${
+      -window.innerHeight / 3
+    }px 0px`,
+  };
+
+  function callback(entries, observer) {
+    entries.forEach((entry, i) => {
+      const { target, intersectionRatio, boundingClientRect, isIntersecting } =
+        entry;
+      if (isIntersecting) {
+        // document.documentElement.dataset.section = target.dataset.exerciseKey;
+        target.classList.add("in-view");
+      } else {
+        target.classList.remove("in-view");
+      }
+    });
+  }
+
+  const observer = new IntersectionObserver(callback, options);
+
   sections.forEach((section) => {
+    observer.observe(section);
     const styleTag = section.querySelector(".editor > style");
     const _tA = section.querySelector(".editor > textarea");
     const exerciseKey = section.dataset.exerciseKey;

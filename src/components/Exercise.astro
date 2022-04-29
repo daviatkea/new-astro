@@ -77,7 +77,7 @@ const { customClass, help, Content } = data
               </button>
             </div>
         </div>
-          <textarea id={data.frontmatter.id} aria-label="Write here" autocorrect="off" autocomplete="off" spellcheck="false" autocapitalize="off" class="prism-live language-css line-numbers">{data.frontmatter.startingCSS.trim()}</textarea>
+          <textarea id={data.frontmatter.id} autocorrect="off" autocomplete="off" spellcheck="false" autocapitalize="off" class="prism-live language-css line-numbers">{data.frontmatter.startingCSS.trim()}</textarea>
 
         <div class="editor-actions">
           {data.frontmatter.help?.link && data.frontmatter.help?.topic ? (<small>Har du brug for hjælp? <a href={data.frontmatter.help.link} target="_blank" rel="noopener">
@@ -118,6 +118,10 @@ const { customClass, help, Content } = data
           // inline-size: fit-content;
           color: hsl(209, 23%, 74%);
           position: relative;
+          display: flex;
+          gap: 0.5ch;
+          flex-wrap: wrap;
+          margin-inline-start: var(--space-2);
         
           a:any-link {
             text-decoration: none;
