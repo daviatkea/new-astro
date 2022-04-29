@@ -262,11 +262,11 @@ main {
 //   opacity: 0.7;
 // }
 
-section:focus-within {
-  --pseudo-opacity: 0.4;
-}
-
 .in-view:is(:not(.in-view + *)) {
+  --pseudo-opacity: 0.4;
+
+  --filter: grayscale(0);
+
   .small-label {
     transform: scale(1.1);
     transition: 0.3s;
@@ -292,7 +292,12 @@ section {
   // background: var(--ui-surface);
   background: #fff;
   border-radius: var(--bdrs-l);
-  transition: opacity 0.2s;
+  transition: filter 0.2s;
+
+  & > * {
+    filter: var(--filter, grayscale(0.8));
+    transition: 0.2s;
+  }
 
   &::before,
   &::after {
