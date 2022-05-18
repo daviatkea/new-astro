@@ -269,7 +269,7 @@ main {
 
   .small-label {
     transform: scale(1.1);
-    transition: 0.3s;
+    transition: 0.3s transform;
   }
 }
 // .in-view + .in-view {
@@ -296,7 +296,7 @@ section {
 
   & > * {
     filter: var(--filter, grayscale(0.8));
-    transition: 0.2s;
+    transition: filter 0.2s;
   }
 
   &::before,
@@ -311,7 +311,7 @@ section {
     border-radius: calc(var(--bdrs-md) * 2);
     opacity: var(--pseudo-opacity, 0.2);
     filter: blur(25px);
-    transition: 0.3s;
+    transition: 0.3s opacity;
   }
 
   &::before {
@@ -623,6 +623,7 @@ section [data-no-hints] {
   justify-self: stretch;
   align-self: stretch;
   gap: 1px;
+  background: #f1eef5;
 }
 
 section.stretch .output {
@@ -707,6 +708,7 @@ section.bg-image .output > div {
 
 .editor {
   position: relative;
+  z-index: 1;
   // background: var(--ui-bg);
   background: var(--blue-800);
   // overflow: auto;
