@@ -11,6 +11,6 @@ export default defineConfig({
     ssr: {
       external: ["svgo"],
     },
-    plugins: [astroImagePlugin],
+    // plugins: [astroImagePlugin],
   },
 });
