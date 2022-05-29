@@ -20,14 +20,14 @@ const { title = "" } = Astro.props;
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://exercssises.vinther.codes/">
+<meta property="og:url" content={Astro.canonicalURL}>
 <meta property="og:title" content={"ExerCSSises - " + title}>
 <meta property="og:description" content="CSS exercises for the Multimedia Design Program at Copenhagen School of Design and Technology">
 <meta property="og:image" content="https://exercssises.vinther.codes/assets/twitter-card.jpg?v1">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://exercssises.vinther.codes/">
+<meta property="twitter:url" content={Astro.canonicalURL}>
 <meta property="twitter:title" content={"ExerCSSises - " + title}>
 <meta property="twitter:description" content="CSS exercises for the Multimedia Design Program at Copenhagen School of Design and Technology">
 <meta property="twitter:image" content="https://exercssises.vinther.codes/assets/twitter-card.jpg?v1">
