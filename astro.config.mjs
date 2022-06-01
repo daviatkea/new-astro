@@ -8,6 +8,9 @@ export default defineConfig({
     // syntaxHighlight: "prism",
   },
   vite: {
+    server: {
+      host: "0.0.0.0",
+    },
     ssr: {
       external: ["svgo"],
     },

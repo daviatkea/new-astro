@@ -18,6 +18,8 @@ const { title = "" } = Astro.props;
 <meta name="title" content={"ExerCSSises - " + title}>
 <meta name="description" content="CSS exercises for the Multimedia Design Program at Copenhagen School of Design and Technology">
 
+<link rel="canonical" href={Astro.canonicalURL}>
+
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content={Astro.canonicalURL}>
