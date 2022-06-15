@@ -184,6 +184,7 @@
       const count = parent.children.length;
       const box = document.createElement("div");
       box.className = `box box-${count + 1}`;
+      box.textContent = `.box-${count + 1}`;
       // box.setAttribute("contenteditable", true);
       parent.appendChild(box);
     }

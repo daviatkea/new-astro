@@ -2,12 +2,12 @@
 import { Prism } from '@astrojs/prism';
 import { Icon } from 'astro-icon'
 const { boxes } = Astro.props;
-const boxCount = boxes.map((_,index)=>(`<div class="box box-${index+1}">box-${index+1}</div>`)).join("\n\t")
+const boxCount = boxes.map((_,index)=>(`<div class="box box-${index+1}">.box-${index+1}</div>`)).join("\n\t")
 const htmlContent = `<div class="container">
   ${boxCount}
 </div>`
 const htmlContentAlt = `<div class="container">
-  <div class="box box-1">box-1</div>
+  <div class="box box-1">.box-1</div>
   ...
 </div>`
 ---

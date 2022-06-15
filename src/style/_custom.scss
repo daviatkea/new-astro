@@ -183,7 +183,7 @@ body {
 }
 
 section img {
-  background: var(--ui-primary, #72f1b8);
+  background: #f1eef5;
 }
 
 /* .place-items {
@@ -269,7 +269,7 @@ main {
 
   .small-label {
     transform: scale(1.1);
-    transition: 0.3s transform;
+    // transition: 0.3s transform;
   }
 }
 // .in-view + .in-view {
@@ -312,6 +312,7 @@ section {
     opacity: var(--pseudo-opacity, 0.2);
     filter: blur(25px);
     transition: 0.3s opacity;
+    mix-blend-mode: color-dodge;
   }
 
   &::before {
@@ -361,6 +362,7 @@ section :is(.small-label, .exercise-details, .controls) {
   border: 0.125rem solid #2c203b;
   isolation: isolate;
   overflow: hidden;
+  transition: 0.3s transform;
 
   @media (max-width: 895px) {
     margin-block-end: var(--space-5);
@@ -540,13 +542,23 @@ section [data-no-hints] {
 }
 
 .output:is(.editor:focus-within + *) {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E@keyframes ant %7Bto %7Bstroke-dashoffset: -6;%7D%7D%3C/style%3E%3Crect width='100%25' height='100%25' style='stroke: %235000ca; stroke-width: 3.75px; fill: none;stroke-dasharray: 4 2; animation: ant 1s infinite linear'/%3E%3C/svg%3E")
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E@keyframes ant %7Bto %7Bstroke-dashoffset: -8;%7D%7D%3C/style%3E%3Crect width='100%25' height='100%25' style='stroke: %235000ca; stroke-width: 3.75px; fill: none;stroke-dasharray: 5 3; animation: ant 1s infinite linear'/%3E%3C/svg%3E")
     border-box;
 
   border-color: transparent;
   // box-shadow: 0 0 36px #5000ca22;
-  filter: drop-shadow(0 0 15px #5000ca33);
+  filter: drop-shadow(0 0 15px #5000ca11);
   transition: filter 0.15s;
+}
+
+.output:is(.editor:focus-within + *):hover > .container {
+  background: repeating-linear-gradient(
+        -45deg,
+        #7740c8 0 1.5px,
+        #938fe2 0 7.5px
+      )
+      content-box,
+    #f1eef5;
 }
 
 .output:is(.editor:focus-within + *) .box {
@@ -554,10 +566,12 @@ section [data-no-hints] {
 }
 
 .output {
+  --padding: var(--space-2);
   display: grid;
   align-self: start;
   position: relative;
-  max-inline-size: 100%;
+  // max-inline-size: 100%;
+  max-inline-size: calc(100% + (var(--padding) * 2));
   max-block-size: 500px;
   border: 2px dashed transparent;
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
@@ -567,8 +581,10 @@ section [data-no-hints] {
   // border-radius: var(--bdrs-l);
   user-select: none;
   border-radius: var(--bdrs-sm);
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E@keyframes ant %7Bto %7Bstroke-dashoffset: -6;%7D%7D%3C/style%3E%3Crect width='100%25' height='100%25' style='stroke: %235000ca; stroke-width: 3.75px; fill: none;stroke-dasharray: 4 2; animation: ant 0s infinite linear'/%3E%3C/svg%3E")
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E@keyframes ant %7Bto %7Bstroke-dashoffset: -8;%7D%7D%3C/style%3E%3Crect width='100%25' height='100%25' style='stroke: %235000ca; stroke-width: 3.75px; fill: none;stroke-dasharray: 5 3; animation: ant 0s infinite linear'/%3E%3C/svg%3E")
     border-box;
+  padding: var(--padding);
+  margin: calc(var(--padding) * -1);
 
   @media (max-width: 895px) {
     resize: revert;
@@ -602,7 +618,7 @@ section [data-no-hints] {
   }
 }
 
-.output[style]::before {
+.output::before {
   content: "Dobbeltklik for at nulstille højde/bredde";
   font-weight: 500;
   position: absolute;
@@ -614,6 +630,13 @@ section [data-no-hints] {
   margin-inline: auto;
   background: #fffd;
   border-radius: var(--bdrs-sm);
+  pointer-events: none;
+  transform: translateY(100%);
+}
+
+.output[style]::before {
+  transform: none;
+  transition: 0.2s 0.5s transform;
 }
 
 .output > div {
@@ -663,12 +686,12 @@ section.bg-image .output > div {
   background: var(--ui-primary);
   // color: #2a2139;
   color: var(--ui-bg-2);
-  font-weight: 700;
+  font-weight: 500;
   counter-increment: count;
 }
 
 .box::before {
-  content: ".box-" counter(count) " ";
+  // content: ".box-" counter(count) " ";
   // display: contents;
   font-weight: 500;
 }
