@@ -97,11 +97,17 @@ pre[class*="language-"] {
 
 .token.function-name {
   color: #6196cc;
+  color: #00d4ff;
 }
 
-.token.boolean,
-.token.selector .token.id,
 .token.function {
+  color: #00d4ff;
+  color: #a7b6ff;
+}
+
+/*.token.function,*/
+.token.boolean,
+.token.selector .token.id {
   color: #fdfdfd;
   // text-shadow: 0 0 2px #001716, 0 0 3px #03edf975, 0 0 5px #03edf975,
   //   0 0 8px #03edf975;
