@@ -177,9 +177,23 @@ body {
   // background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask2418%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='url(%23SvgjsLinearGradient2419)'%3e%3c/rect%3e%3cpath d='M1440 0L1424.96 0L1440 271.4z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M1424.96 0L1440 271.4L1440 374.90999999999997L1143.8200000000002 0z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M1143.82 0L1440 374.90999999999997L1440 463.26L1101.3 0z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M1101.3 0L1440 463.26L1440 525.38L956.29 0z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M0 560L295.09 560L0 525.72z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M0 525.72L295.09 560L341.12 560L0 279.02000000000004z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M0 279.02L341.12 560L967.6 560L0 196.42999999999998z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M0 196.42999999999995L967.6 560L1115.04 560L0 114.16999999999994z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask2418'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='15.28%25' y1='-39.29%25' x2='84.72%25' y2='139.29%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient2419'%3e%3cstop stop-color='rgba(44%2c 32%2c 59%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(44%2c 32%2c 59%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e")
   //   50% / cover no-repeat fixed;
   // background: var(--bg);
-  background: var(--blue-900);
+  //background: var(--blue-900);
   --bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1034%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='url(%23SvgjsLinearGradient1035)'%3e%3c/rect%3e%3cpath d='M1440 0L1424.96 0L1440 271.4z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M1424.96 0L1440 271.4L1440 374.90999999999997L1143.8200000000002 0z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M1143.82 0L1440 374.90999999999997L1440 463.26L1101.3 0z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M1101.3 0L1440 463.26L1440 525.38L956.29 0z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M0 560L295.09 560L0 525.72z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M0 525.72L295.09 560L341.12 560L0 279.02000000000004z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M0 279.02L341.12 560L967.6 560L0 196.42999999999998z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M0 196.42999999999995L967.6 560L1115.04 560L0 114.16999999999994z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1034'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='15.28%25' y1='-39.29%25' x2='84.72%25' y2='139.29%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1035'%3e%3cstop stop-color='rgba(22%2c 21%2c 43%2c 1)' offset='0.01'%3e%3c/stop%3e%3cstop stop-color='rgba(19%2c 16%2c 57%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e")
     50% / cover no-repeat fixed;
+  background: #0a2540;
+  background-image: conic-gradient(
+      at 16.7% calc(100% - 16.7%),
+      transparent 25%,
+      hsl(210deg 73% 8%) 0
+    ),
+    linear-gradient(to bottom, hsl(182deg 67% 48% / 0.15), transparent),
+    linear-gradient(to bottom left, hsl(264deg 100% 40% / 20%), transparent 50%);
+  background-size: 4px 4px, 100vw 200vh, 100vw 200vh;
+  background-repeat: repeat, no-repeat, no-repeat;
+}
+
+.front {
+  background: var(--blue-900);
 }
 
 section img {
