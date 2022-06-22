@@ -9,7 +9,7 @@
     "preview": "astro preview --host 0.0.0.0"
   },
   "devDependencies": {
-    "astro": "^1.0.0-beta.50",
+    "astro": "^1.0.0-beta.51",
     "autoprefixer": "^10.4.4",
     "postcss": "^8.4.12",
     "sass": "^1.50.0"
