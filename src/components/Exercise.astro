@@ -25,7 +25,7 @@ const { customClass, help, Content } = data
                       <summary>Hints</summary>
                       <ul class="hints">
                           {data.frontmatter.hints.map(hint=>{
-                              return <li data-type={hint?.type}><span><code>{hint?.name}</code> ({hint?.type})</span></li>      
+                              return <li data-type={hint.type}><code>{hint.name}</code>&nbsp;<span>({hint.type})</span></li>      
                           })}
                       </ul>
                   </details>
@@ -41,17 +41,18 @@ const { customClass, help, Content } = data
                   <img loading={num===1 ? "eager" : "lazy"} fetchpriority={num===1 ? "high" : "low"} src={data.frontmatter.targetSrc.path} alt="" width={data.frontmatter.targetSrc.width} height={data.frontmatter.targetSrc.height}>
               )
             }
+            
+            {data.frontmatter.canAddBoxes && (
+                <div class="controls">
+                    <div>
+                        <Button icon="plus">Tilføj boks</Button>
+                        <Button icon="minus">Fjern boks</Button>
+                    </div>
+                </div>
+            )}
         </article>
 
         
-        {data.frontmatter.canAddBoxes && (
-            <div class="controls">
-                <div>
-                    <Button icon="plus">Tilføj boks</Button>
-                    <Button icon="minus">Fjern boks</Button>
-                </div>
-            </div>
-        )}
 
         <div class="editor">
           <label for={data.frontmatter.id}><span>CSS</span></label>
