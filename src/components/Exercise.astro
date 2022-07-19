@@ -22,7 +22,7 @@ const { customClass, help, Content } = data
               
               {data.frontmatter.hints ? (
                   <details>
-                      <summary>Hints</summary>
+                      <summary>Hints <Icon name="lucide:chevron-down" width="16" height="16" aria-hidden="true" /></summary>
                       <ul class="hints">
                           {data.frontmatter.hints.map(hint=>{
                               return <li data-type={hint.type}><code>{hint.name}</code>&nbsp;<span>({hint.type})</span></li>      
@@ -41,7 +41,7 @@ const { customClass, help, Content } = data
                   <img loading={num===1 ? "eager" : "lazy"} fetchpriority={num===1 ? "high" : "low"} src={data.frontmatter.targetSrc.path} alt="" width={data.frontmatter.targetSrc.width} height={data.frontmatter.targetSrc.height}>
               )
             }
-            
+
             {data.frontmatter.canAddBoxes && (
                 <div class="controls">
                     <div>
