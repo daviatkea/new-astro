@@ -455,8 +455,11 @@ section .exercise-details img {
 }
 
 section .hints {
-  display: grid;
-  gap: 0.5ex;
+  // display: grid;
+  // gap: 0.5ex;
+
+  display: flex;
+  flex-wrap: wrap;
 
   padding: var(--space-1) var(--space-4);
   margin-block-start: var(--space-2);
@@ -466,7 +469,9 @@ section .hints {
   // display: inline-grid;
   font-family: "Wotfard";
   font-weight: 300;
-  user-select: none;
+
+  overflow: hidden;
+  padding: 2.5px;
 }
 
 .exercise-content {
@@ -557,6 +562,16 @@ section [data-no-hints] {
   display: flex;
   white-space: break-spaces;
   align-items: center;
+
+  background: linear-gradient(90deg, var(--blue-700), transparent),
+    var(--blue-800);
+  padding: var(--space-4);
+  border-radius: var(--bdrs-md);
+  margin: -3px -3.5px;
+}
+
+.hints li[data-type] + li[data-type] {
+  padding-inline-end: calc(var(--space-4) + 3px);
 }
 
 .hints code {
@@ -564,13 +579,14 @@ section [data-no-hints] {
   padding-inline: var(--space-2);
   padding-block: 0;
   font-size: 0.9em;
-  background: var(--blue-800) !important;
+  // background: var(--blue-800);
   color: var(--m, var(--ui-primary));
   border-radius: var(--bdrs-md);
 }
 
 .hints li::before {
   content: "";
+  content: none;
   color: var(--m, currentColor);
   box-shadow: 0 0 0px black;
   inline-size: var(--space-2);
