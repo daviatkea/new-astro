@@ -472,6 +472,11 @@ section .hints {
 
   overflow: hidden;
   padding: 2.5px;
+
+  padding: calc(var(--space-3) + 3px) calc(var(--space-3) + 5px);
+  background: #e9eef4;
+  border-radius: var(--bdrs-l);
+  margin-block-start: calc(var(--space-3) * -1);
 }
 
 .exercise-content {
@@ -489,6 +494,7 @@ section .hints {
 }
 
 .exercise-content details[open] summary {
+  border-radius: var(--bdrs-l) var(--bdrs-l) 0 0;
   // border-block-end: 2px solid hsl(154 29% 90%);
   // width: auto;
   // border-radius: var(--bdrs-sm) var(--bdrs-sm) 0 0;
@@ -498,6 +504,9 @@ section .hints {
 }
 
 .exercise-content summary {
+  padding: var(--space-3);
+  background: #e9eef4;
+  border-radius: var(--bdrs-l);
   // position: absolute;
   // inset-block-start: -0.35rem;
   // background: #efebf9;
@@ -567,7 +576,7 @@ section [data-no-hints] {
     var(--blue-800);
   padding: var(--space-4);
   border-radius: var(--bdrs-md);
-  margin: -3px -3.5px;
+  margin: -3px -5px;
 }
 
 .hints li[data-type] + li[data-type] {
