@@ -23,11 +23,19 @@ const { customClass, help, Content } = data
               {data.frontmatter.hints ? (
                   <details>
                       <summary>Hints <Icon name="lucide:chevron-down" width="16" height="16" aria-hidden="true" /></summary>
-                      <ul class="hints">
-                          {data.frontmatter.hints.map(hint=>{
+                      {data.frontmatter.hints.some(hint => hint.type==="property") && (
+                        <ul class="hints properties">
+                          {data.frontmatter.hints.filter(hint => hint.type==="property").map(hint=>{
                               return <li data-type={hint.type}><code>{hint.name}</code></li>      
                           })}
+                      </ul>)}
+                      {data.frontmatter.hints.some(hint => hint.type==="value") && (
+                        <ul class="hints values">
+                          {data.frontmatter.hints.filter(hint => hint.type==="value").map(hint=>{
+                              return <li data-type={hint.type}><code>{hint.name}</code></li>
+                          })}
                       </ul>
+                      )}
                   </details>
               ) : (
                   <div data-no-hints>Ingen hints</div>
