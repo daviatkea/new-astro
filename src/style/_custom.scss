@@ -736,6 +736,9 @@ section.stretch .output {
 
 section.logo-box .output .box:nth-child(1) {
   padding: 1rem;
+  display: grid;
+  font-size: 80%;
+  line-height: 1.2;
 
   &::before {
     content: "Logo";
