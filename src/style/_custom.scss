@@ -354,6 +354,10 @@ section {
 section:has(:target) {
   min-height: 95vh;
   grid-template-rows: min-content min-content 1fr;
+
+  @media (max-width: 895px) {
+    grid-template-rows: min-content min-content min-content 1fr;
+  }
 }
 
 /* section header, */
