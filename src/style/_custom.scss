@@ -163,7 +163,8 @@
 
 html {
   /* block-size: 100%; */
-  scroll-padding-block-start: var(--space-7);
+  // scroll-padding-block-start: var(--space-7);
+  scroll-padding-block-start: var(--space-5);
   touch-action: pan-y;
   scroll-behavior: smooth;
   overscroll-behavior: contain;
@@ -348,6 +349,11 @@ section {
   &:nth-of-type(even)::after {
     background: var(--purple-200);
   }
+}
+
+section:has(:target) {
+  min-height: 95vh;
+  grid-template-rows: min-content min-content 1fr;
 }
 
 /* section header, */
@@ -693,6 +699,7 @@ section [data-no-hints] {
   border: 2px solid var(--ui-accent);
   color: var(--ui-accent);
   background: var(--ui-surface);
+  pointer-events: none;
 
   @media (max-width: 895px) {
     display: none;
